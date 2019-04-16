@@ -1,0 +1,183 @@
+.header {
+  position: relative;
+  background:
+          url('../../images/freewp5/header-bg-bottom.png') center bottom no-repeat,
+          url('../../images/freewp5/wp5.png') 10% center no-repeat,
+          linear-gradient(180deg, #122B63 0%, #29478F 100%);
+}
+
+.header__wrap {
+  padding-bottom: 40px;
+}
+
+.header__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__course {
+  max-width: 100%;
+  display: block;
+  margin-left: 90px;
+}
+
+.header__info {
+  max-width: 570px;
+  margin-left: 100px;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.header__title {
+  color: $white;
+  font-family: Montserrat;
+  font-weight: 700;
+  margin: 0;
+  font-size: 38px;
+  line-height: normal;
+}
+
+.header__span {
+  opacity: .7;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: normal;
+  display: block;
+  margin-top: 10px;
+}
+
+.header__text {
+  font-family: Open Sans;
+  font-size: 20px;
+  line-height: 33px;
+  color: $white;
+  margin-top: 40px;
+}
+
+.header__form {
+  max-width: 470px;
+  flex-basis: 470px;
+  margin-right: 100px;
+  align-self: flex-start;
+  margin-top: 60px;
+  position: relative;
+
+  &::after {
+    background: url('../../images/freewp5/course-icon.png') center top no-repeat;
+    content: "";
+    width: 100%;
+    height: 380px;
+    display: block;
+    position: absolute;
+    top: -380px;
+    left: 0;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .header__course {
+    margin-left: 0;
+  }
+
+  .header__form {
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .header__wrap {
+    background: none;
+  }
+
+  .header__info {
+    margin-left: 0;
+  }
+
+}
+
+@media (max-width: 880px) {
+
+  .header__wrap {
+    padding-bottom: 50px;
+  }
+
+  .header__info {
+    max-width: 100%;
+    padding-right: 0;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .header__title {
+    font-size: 30px;
+  }
+
+  .header__span {
+    font-size: 45px;
+  }
+
+  .header__text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .header__form {
+    margin-top: 0;
+
+    &::after {
+      display: none;
+    }
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .header__flex {
+    flex-direction: column;
+  }
+
+  .header__title {
+    background: none;
+    padding-right: 0;
+  }
+
+  .header__img {
+    margin: 0 auto 20px;
+  }
+
+  .header__form {
+    flex-basis: auto;
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .header__title {
+    font-size: 25px;
+
+    br {
+      display: none;
+    }
+
+  }
+
+  .header__span {
+    font-size: 35px;
+
+    br {
+      display: none;
+    }
+
+  }
+
+}

@@ -1,0 +1,124 @@
+$inputBg: #283E79;
+$colorInput: #FFF9EE;
+
+.form {
+  background: $second;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 37px 60px 20px 60px;
+  position: relative;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form__android {
+  position: absolute;
+  right: -177px;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.form__title {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 29px;
+  color: $white;
+  margin: 5px 0 30px;
+  text-align: center;
+}
+
+.form__input {
+  margin: 22px 0;
+  position: relative;
+
+  input {
+    background-color: $inputBg;
+    border-radius: 5px;
+    line-height: 36px;
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    color: $white;
+    border: none;
+    box-shadow: none;
+    font-family: 'Open Sans';
+    padding: 11px 10px 11px 20px;
+    box-sizing: border-box;
+    width: 100%;
+
+    &::placeholder {
+      color: $colorInput;
+      opacity: 0.6;
+    }
+
+  }
+
+  label.error {
+    position: absolute;
+    width: 100%;
+    bottom: -17px;
+    left: 0;
+    color: $white;
+    text-align: center;
+    font-size: 12px;
+  }
+
+}
+
+.form__label {
+  @include visually-hidden;
+}
+
+.form__button {
+  background-color: $primary;
+  font-family: 'IBM Plex Sans';
+  border-radius: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: -0.4px;
+  color: $white;
+  padding: 13px 0;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  max-width: 239px;
+  width: 100%;
+  margin: 30px auto;
+
+  &:hover, &:active {
+    background-color: darken($primary, 15%);
+  }
+
+}
+
+.form__subscribe {
+  line-height: 18px;
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  color: $colorInput;
+  opacity: 0.6;
+  margin: 20px 0;
+  text-align: center;
+}
+
+@media (max-width: 880px) {
+
+  .form__title {
+    font-size: 22px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .form {
+    padding: 25px 20px 20px 20px;
+  }
+
+  .form__title {
+    font-size: 24px;
+  }
+
+}
